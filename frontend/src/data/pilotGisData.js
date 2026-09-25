@@ -1,7 +1,7 @@
 /**
  * SafeSettle MVP — Pilot Demonstration Dataset
  * Focus Area: Puri Coastal Corridor, Odisha, India
- * 
+ *
  * DISCLAIMER:
  * Pilot demonstration data only — not official government operational data.
  * Synthetic operational scenario modeling a coastal cyclone & storm surge event.
@@ -9,9 +9,10 @@
 
 export const PILOT_METADATA = {
   region: "Puri District Coastal Corridor, Odisha, India",
-  center: [19.85, 85.82], // [Latitude, Longitude] for Leaflet
+  center: [19.85, 85.82],
   defaultZoom: 12,
-  disclaimer: "Pilot demonstration data — not official government operational data."
+  disclaimer:
+    "Pilot demonstration data — not official government operational data."
 };
 
 export const PILOT_RISK_ZONES = [
@@ -20,8 +21,6 @@ export const PILOT_RISK_ZONES = [
     name: "Coastal Surge Zone Alpha (Puri Coastal Belt)",
     hazard_type: "STORM_SURGE",
     risk_level: "CRITICAL",
-    // PostGIS SRID 4326: MULTIPOLYGON(((85.80 19.78, 85.88 19.78, 85.89 19.83, 85.81 19.84, 85.80 19.78)))
-    // Leaflet coordinates: [[lat, lng], [lat, lng], ...]
     coordinates: [
       [19.78, 85.80],
       [19.78, 85.88],
@@ -35,7 +34,6 @@ export const PILOT_RISK_ZONES = [
     name: "Bhargavi River Lowland Inundation Belt",
     hazard_type: "FLOOD",
     risk_level: "HIGH",
-    // PostGIS SRID 4326: MULTIPOLYGON(((85.75 19.85, 85.82 19.85, 85.84 19.92, 85.76 19.91, 85.75 19.85)))
     coordinates: [
       [19.85, 85.75],
       [19.85, 85.82],
@@ -53,9 +51,8 @@ export const PILOT_HABITATIONS = [
     population: 1250,
     vulnerable_population: 380,
     risk_level: "CRITICAL",
-    priority_score: 94.50,
-    // PostGIS: 85.8350, 19.8050
-    coordinates: [19.8050, 85.8350]
+    priority_score: 94.5,
+    coordinates: [19.805, 85.835]
   },
   {
     id: "b0000000-0000-0000-0000-000000000002",
@@ -63,9 +60,8 @@ export const PILOT_HABITATIONS = [
     population: 2100,
     vulnerable_population: 520,
     risk_level: "CRITICAL",
-    priority_score: 91.00,
-    // PostGIS: 85.8420, 19.8010
-    coordinates: [19.8010, 85.8420]
+    priority_score: 91,
+    coordinates: [19.801, 85.842]
   },
   {
     id: "b0000000-0000-0000-0000-000000000003",
@@ -73,9 +69,8 @@ export const PILOT_HABITATIONS = [
     population: 850,
     vulnerable_population: 210,
     risk_level: "HIGH",
-    priority_score: 78.00,
-    // PostGIS: 85.7950, 19.8650
-    coordinates: [19.8650, 85.7950]
+    priority_score: 78,
+    coordinates: [19.865, 85.795]
   },
   {
     id: "b0000000-0000-0000-0000-000000000004",
@@ -83,9 +78,8 @@ export const PILOT_HABITATIONS = [
     population: 1400,
     vulnerable_population: 290,
     risk_level: "MEDIUM",
-    priority_score: 62.50,
-    // PostGIS: 85.7720, 19.9050
-    coordinates: [19.9050, 85.7720]
+    priority_score: 62.5,
+    coordinates: [19.905, 85.772]
   }
 ];
 
@@ -101,8 +95,7 @@ export const PILOT_SHELTERS = [
     medical_support: true,
     transport_available: true,
     status: "ACTIVE",
-    // PostGIS: 85.8650, 19.8820
-    coordinates: [19.8820, 85.8650]
+    coordinates: [19.882, 85.865]
   },
   {
     id: "c0000000-0000-0000-0000-000000000002",
@@ -113,10 +106,9 @@ export const PILOT_SHELTERS = [
     water_available: true,
     sanitation_available: true,
     medical_support: true,
-    transport_available: false,
+    transport_available: true,
     status: "ACTIVE",
-    // PostGIS: 85.8180, 19.8920
-    coordinates: [19.8920, 85.8180]
+    coordinates: [19.892, 85.818]
   },
   {
     id: "c0000000-0000-0000-0000-000000000003",
@@ -126,11 +118,10 @@ export const PILOT_SHELTERS = [
     functional_available_capacity: 1400,
     water_available: true,
     sanitation_available: true,
-    medical_support: false,
+    medical_support: true,
     transport_available: true,
     status: "ACTIVE",
-    // PostGIS: 85.7680, 19.9320
-    coordinates: [19.9320, 85.7680]
+    coordinates: [19.932, 85.768]
   }
 ];
 
@@ -140,12 +131,11 @@ export const PILOT_ROADS = [
     name: "NH-316 Coastal Arterial Route",
     status: "CLEAR",
     road_type: "HIGHWAY",
-    // PostGIS: 85.8300 19.8000, 85.8380 19.8350, 85.8450 19.8700, 85.8650 19.8820
     coordinates: [
-      [19.8000, 85.8300],
-      [19.8350, 85.8380],
-      [19.8700, 85.8450],
-      [19.8820, 85.8650]
+      [19.8, 85.83],
+      [19.835, 85.838],
+      [19.87, 85.845],
+      [19.882, 85.865]
     ]
   },
   {
@@ -153,11 +143,10 @@ export const PILOT_ROADS = [
     name: "Chandanpur-Gop Rural Relief Link",
     status: "CLEAR",
     road_type: "SECONDARY",
-    // PostGIS: 85.7950 19.8650, 85.8200 19.8720, 85.8650 19.8820
     coordinates: [
-      [19.8650, 85.7950],
-      [19.8720, 85.8200],
-      [19.8820, 85.8650]
+      [19.865, 85.795],
+      [19.872, 85.82],
+      [19.882, 85.865]
     ]
   },
   {
@@ -165,11 +154,10 @@ export const PILOT_ROADS = [
     name: "Pentakota Shoreline Access Road",
     status: "FLOODED",
     road_type: "TERTIARY",
-    // PostGIS: 85.8420 19.8010, 85.8370 19.8150, 85.8300 19.8000
     coordinates: [
-      [19.8010, 85.8420],
-      [19.8150, 85.8370],
-      [19.8000, 85.8300]
+      [19.801, 85.842],
+      [19.815, 85.837],
+      [19.8, 85.83]
     ]
   },
   {
@@ -177,11 +165,10 @@ export const PILOT_ROADS = [
     name: "Satyabadi Bypass Connector",
     status: "CLEAR",
     road_type: "PRIMARY",
-    // PostGIS: 85.7720 19.9050, 85.7700 19.9200, 85.7680 19.9320
     coordinates: [
-      [19.9050, 85.7720],
-      [19.9200, 85.7700],
-      [19.9320, 85.7680]
+      [19.905, 85.772],
+      [19.92, 85.77],
+      [19.932, 85.768]
     ]
   }
 ];
@@ -190,28 +177,28 @@ export const PILOT_CITIZEN_REPORTS = [
   {
     id: "e0000000-0000-0000-0000-000000000001",
     report_type: "ROAD_BLOCKED",
-    description: "Fallen Casuarina trees and 2 feet waterlogging blocking the Pentakota access road link",
+    description:
+      "Fallen Casuarina trees and 2 feet waterlogging blocking the Pentakota access road link",
     severity: "HIGH",
     status: "PENDING_VERIFICATION",
-    // PostGIS: 85.8390, 19.8080
-    coordinates: [19.8080, 85.8390]
+    coordinates: [19.808, 85.839]
   },
   {
     id: "e0000000-0000-0000-0000-000000000002",
     report_type: "FLOODING",
-    description: "Bhargavi river embankment seepage near Chandanpur culvert. Lowland inundation beginning.",
+    description:
+      "Bhargavi river embankment seepage near Chandanpur culvert. Lowland inundation beginning.",
     severity: "CRITICAL",
     status: "VERIFIED",
-    // PostGIS: 85.7980, 19.8690
-    coordinates: [19.8690, 85.7980]
+    coordinates: [19.869, 85.798]
   },
   {
     id: "e0000000-0000-0000-0000-000000000003",
     report_type: "BRIDGE_COLLAPSE",
-    description: "Rumor of Satyabadi bridge collapse circulating on social media",
+    description:
+      "Rumor of Satyabadi bridge collapse circulating on social media",
     severity: "LOW",
     status: "REJECTED",
-    // PostGIS: 85.7710, 19.9120
-    coordinates: [19.9120, 85.7710]
+    coordinates: [19.912, 85.771]
   }
 ];
