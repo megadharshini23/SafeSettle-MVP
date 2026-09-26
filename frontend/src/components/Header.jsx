@@ -8,7 +8,7 @@ export default function Header({ currentRole, onRoleChange }) {
         <div className="logo-badge">
           <ShieldAlert className="logo-icon" size={24} />
           <div>
-            <h1 className="logo-title">SafeSettle</h1>
+            <h1 className="logo-title">SafeSettle LIVE TEST</h1>
             <span className="logo-subtitle">Disaster-Relocation Decision Support</span>
           </div>
         </div>
